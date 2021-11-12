@@ -1,18 +1,21 @@
-class Car {
-    constructor(brand) {
-      this.carname = brand;
-    }
-    present() {
-      return 'I have a ' + this.carname;
-    }
-  }
 
-  class Model extends Car {
-    constructor(brand, mod) {
-      super(brand);
-      this.model = mod;
+class Car {
+
+    constructor(brand, speed, weight) {
+        this.brand = brand;
+        this.speed = speed;
+        this.weight = weight;
+
+
+        console.log(("Это конструктор"));
     }
-    show() {
-      return this.present() + ', it is a ' + this.model;
+
+
+    showMarka() {
+
+       console.log(("Марка: " + this.brend + "; Скорость: " + this.speed + "км/ч; Вес: " + this.weight + "кг;"));
     }
-  }
+}
+
+
+let car = new Car("ВАЗ", 150, 2000)
